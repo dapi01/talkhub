@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: USER
@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>TalkHub</h1>
-<link rel ="stylesheet" href = ${pageContext.request.contextPath}/stat
+<link rel ="stylesheet" href = ${pageContext.request.contextPath}/stat/>
 <h3> 토크허브에 회원가입하기 </h3>
 
 <form action="${pageContext.request.contextPath}/user/join-proceed">
