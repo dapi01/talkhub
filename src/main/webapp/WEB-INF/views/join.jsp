@@ -40,11 +40,11 @@
     <div>
         <label> 성별 </label>
     <div>
-        <select name="gender">
-        <label><input type="radio" value="남"/>남</label>
-        <label><input type="radio" value="여"/>여</label>
-        <label><input type="radio" value="비공개"/>비공개</label>
-        </select>
+
+        <label><input type="radio" value="남" name="gender"/>남</label>
+        <label><input type="radio" value="여" name="gender"/>여</label>
+        <label><input type="radio" value="비공개" name="gender"/>비공개</label>
+
     </div>
     </div>
 
