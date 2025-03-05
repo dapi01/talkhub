@@ -15,6 +15,7 @@
 <h1>TalkHub</h1>
 <c:choose>
     <c:when test="${authentication}">
+
     <div>
         <a href="">마이페이지</a>
         <a href="${pageContext.request.contextPath}/user/logout">로그아웃</a>
