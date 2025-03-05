@@ -30,6 +30,5 @@ public class JoinProceedServlet extends HttpServlet {
         }else {
             req.getRequestDispatcher("/WEB-INF/views/user/join-fail.jsp");
         }
-        req.getRequestDispatcher("/WEB-INF/views/user/join-proceed.jsp");
     }
 }

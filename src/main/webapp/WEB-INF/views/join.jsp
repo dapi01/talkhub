@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>TalkHub</h1>
-<link rel ="stylesheet" href = ${pageContext.request.contextPath}/stat/>
+
 <h3> 토크허브에 회원가입하기 </h3>
 
 <form action="${pageContext.request.contextPath}/user/join-proceed">
@@ -40,11 +40,9 @@
     <div>
         <label> 성별 </label>
     <div>
-        <select name="gender">
-        <label><input type="radio" value="남"/>남</label>
-        <label><input type="radio" value="여"/>여</label>
-        <label><input type="radio" value="비공개"/>비공개</label>
-        </select>
+        <label><input type="radio" name="gender" value="남"/>남</label>
+        <label><input type="radio" name="gender" value="여"/>여</label>
+        <label><input type="radio" name="gender"  value="비공개"/>비공개</label>
     </div>
     </div>
 

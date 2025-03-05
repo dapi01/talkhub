@@ -9,24 +9,25 @@
 
 <html>
 <head>
-    <title>로그인</title>
+  <title>TalkHub</title>
 </head>
 <body>
+<h1>TalkHub</h1>
+<h3>로그인</h3>
 <form action="${pageContext.request.contextPath}/user/login-proceed">
+  <p>
+    <label>아이디</label>
   <div>
-    <label> 아이디 </label>
-    <div>
-      <input type="text"  name="id"/>
-    </div>
+    <input type="text" name="id">
   </div>
+  </p>
+  <p>
+    <label>비밀번호</label>
   <div>
-    <label> 비밀번호 </label>
-    <div>
-      <input type="password"  name="password"/>
-    </div>
+    <input type="password" name="password">
   </div>
-
-  <p><button type = "submit">로그인</button></p>
+  </p>
+  <button type="submit">로그인</button>
 </form>
 </body>
 </html>
