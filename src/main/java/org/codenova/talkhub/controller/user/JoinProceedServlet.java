@@ -9,7 +9,7 @@ import org.codenova.talkhub.model.dao.UserDAO;
 
 import java.io.IOException;
 
-@WebServlet("/user/join-proceed")
+@WebServlet("/join-proceed")
 public class JoinProceedServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -30,6 +30,5 @@ public class JoinProceedServlet extends HttpServlet {
         }else {
             req.getRequestDispatcher("/WEB-INF/views/user/join-fail.jsp");
         }
-        req.getRequestDispatcher("/WEB-INF/views/user/join-proceed.jsp");
     }
 }

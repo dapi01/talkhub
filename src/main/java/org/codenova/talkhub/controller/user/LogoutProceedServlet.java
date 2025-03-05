@@ -5,13 +5,18 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebServlet("/join")
-public class JoinServlet extends HttpServlet {
+@WebServlet("/user/logout")
+public class LogoutProceedServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/views/join.jsp").forward(req,resp);
+
+        HttpSession session = req.getSession();
+        session.invalidate();
+
+        req.getRequestDispatcher("/WEB-INF/views/index.jsp").forward(req,resp);
     }
 }
