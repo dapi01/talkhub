@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>TalkHub</title>
+   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"/>
 </head>
 <body>
 <h1>TalkHub</h1>
@@ -17,7 +18,7 @@
     <c:when test="${authentication}">
 
     <div>
-        <a href="">마이페이지</a>
+        <a href="${pageContext.request.contextPath}/user/profile">마이페이지</a>
         <a href="${pageContext.request.contextPath}/user/logout">로그아웃</a>
     </div>
 </c:when>

@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>TalkHub</h1>
-<h3> 토크허브에 회원가입하기 </h3>
+<h3 style="color: darkolivegreen"> 토크허브에 회원가입하기 </h3>
 
 
 <form action="${pageContext.request.contextPath}/join-proceed" method="post">
@@ -28,6 +28,7 @@
         <div style="color: red; font-size:small">${idError}</div>
     </div>
 
+
     <div>
         <label> 비밀번호 </label>
         <div>
@@ -36,6 +37,8 @@
         <c:if test="${passwordError != null}"/>
         <div style="color: red; font-size:small">${passwordError}</div>
     </div>
+
+
     <div>
         <label> 활동명 </label>
         <div>
@@ -45,6 +48,8 @@
         <div style="color: red; font-size:small">${nicknameError}</div>
     </div>
     <div>
+
+
         <label> 성별 </label>
         <div>
             <label><input type="radio" name="gender" value="남"/>남</label>

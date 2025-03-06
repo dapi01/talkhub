@@ -35,7 +35,15 @@ public class LoginProceedServlet extends HttpServlet {
                 //인증성공
                 HttpSession session = req.getSession();
                 session.setAttribute("user",found);
-                resp.sendRedirect(req.getContextPath() + "/index");
+
+                if(session.getAttribute("callback") == null){
+                    resp.sendRedirect(req.getContextPath() + "/index");
+                }else {
+                    String callback = (String)session.getAttribute("callback");
+                    session.removeAttribute("callback");
+                    resp.sendRedirect(callback);
+                }
+
 
             }else {
                 //인증실패
