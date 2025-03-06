@@ -17,7 +17,7 @@
 <h3> 토크허브에 회원가입하기 </h3>
 
 
-<form action="${pageContext.request.contextPath}/join-proceed">
+<form action="${pageContext.request.contextPath}/join-proceed" method="post">
 <div>
     <label> 아이디 </label>
 
