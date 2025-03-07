@@ -18,6 +18,9 @@
     <li>활동명 : ${user.nickname}</li>
     <li>성별 : ${user.gender}</li>
     <li>가입시기 : ${user.createdAt}</li>
+
+    <li><a href="${pageContext.request.contextPath}/post/list">TalkHub 게시판ㄱㄱ</a></li>
+
 </ul>
 </body>
 </html>

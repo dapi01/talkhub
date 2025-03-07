@@ -3,7 +3,7 @@ package org.codenova.talkhub.model.vo;
 import java.util.Date;
 
 public class Post {
-
+private int id;
     private String writer_id;
     private String category;
     private String title;
@@ -16,7 +16,8 @@ public class Post {
     public Post() {
     }
 
-    public Post(String writer_id, String category, String title, String content, int views, int likes, Date writed_at, Date modified_at) {
+    public Post(int id, String writer_id, String category, String title, String content, int views, int likes, Date writed_at, Date modified_at) {
+        this.id = id;
         this.writer_id = writer_id;
         this.category = category;
         this.title = title;
@@ -25,6 +26,14 @@ public class Post {
         this.likes = likes;
         this.writed_at = writed_at;
         this.modified_at = modified_at;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getWriter_id() {

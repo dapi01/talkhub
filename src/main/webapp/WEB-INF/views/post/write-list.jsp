@@ -9,26 +9,29 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-  <title>TalkHub-Post</title>
+  <title>TalkHub</title>
 </head>
 <body>
-<h3> TalkHub-Post | <small> 글 목록 </small></h3>
-<p>
-  총 ${count}개의 글이 작성되어있습니다.
-</p>
-<c:forEach var="i" begin="1" end = "10">
-  ${i}
-  <c:if test="${i != 10}"> | </c:if>
-</c:forEach>
+
+<h1>TalkHub</h1>
+<hr/>
+<h2>TalkHub 게시판</h2>
 <ul>
-  <c:forEach var = "p" items = "${datas}">
-    <li>
-      <a href="${pageContext.request.contextPath}/read?code=${p.code}">
-        <img src="${p.imageUrl}" alt="${p.name}" />
-      </a>
-      <span>${p.name}</span>
+  <c:forEach var="one" items="${posts}">
+    <li style="display: flex; justify-content: space-between">
+      <div>
+        <a href="${pageContext.request.contextPath}/message?id=${one.id}">📝[${one.category}] ${one.title}</a>
+      </div>
+      <div >
+        🌱 ${one.writer_id}  |  🕒 ${one.writed_at} |  👁‍ ${one.views} | ❤️ ${one.likes}
+      </div>
     </li>
+
   </c:forEach>
+
+  <form action="${pageContext.request.contextPath}/write" method="post">
+    <p><button type = "submit">글쓰기</button></p>
+  </form>
 </ul>
 
 </body>

@@ -19,7 +19,7 @@
         <div>
             <h4> 글 작성이 완료되었습니다.</h4>
             <a href="${pageContext.request.contextPath}/message">글 확인하기</a>
-            <a href="${pageContext.request.contextPath}/list">목록으로</a>
+            <a href="${pageContext.request.contextPath}/post/list">목록으로</a>
         </div>
     </c:when>
     <c:otherwise>

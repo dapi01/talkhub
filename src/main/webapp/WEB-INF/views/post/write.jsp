@@ -21,7 +21,7 @@
         <label> 작성자 아이디 </label>
 
         <div>
-            <input type="text"  name="writerId"/>
+            <input type="text"  name="writer_id" value="${writer_id}" readonly/>
         </div>
     </div>
     <div>

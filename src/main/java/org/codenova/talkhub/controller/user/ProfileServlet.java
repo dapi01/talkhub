@@ -24,7 +24,7 @@ public class ProfileServlet extends HttpServlet {
 
             return;
         }
-        // 이 아래부분은 인즈을 받은 사용자에게만 작동하는 코드
+        // 이 아래부분은 인증을 받은 사용자에게만 작동하는 코드
         // 로그인 성공했을 때 유저 객체를 넣어뒀기 때문에
            User user = (User)req.getSession().getAttribute("user");
 
